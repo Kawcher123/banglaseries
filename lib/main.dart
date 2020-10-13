@@ -1,6 +1,7 @@
 import 'package:banglaseries/constant/Constant.dart';
 import 'package:banglaseries/home.dart';
 import 'package:banglaseries/neeko_player_widget.dart';
+import 'package:banglaseries/screens/mainscreen.dart';
 import 'package:banglaseries/screens/splash_screens.dart';
 import 'package:banglaseries/video_controller_wrapper.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.redAccent),
       routes: <String,WidgetBuilder>{
         SPLASH_SCREEN: (BuildContext context)=> AnimatedSplashScreen(),
-        HOME_SCREEN: (BuildContext context)=>  Home(title: 'Bangla Series'),
+        HOME_SCREEN: (BuildContext context)=>  MainScreen(),
       },
       home: AnimatedSplashScreen(),
 

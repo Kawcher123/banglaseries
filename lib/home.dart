@@ -2,6 +2,7 @@
 
 
 import 'package:banglaseries/main.dart';
+import 'package:banglaseries/pagetransition/pagetransition.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -66,11 +67,8 @@ class _HomeState extends State<Home> {
 
                                return GestureDetector(
                                  onTap: () {
-                                   Navigator.push(context,
-                                       MaterialPageRoute(
-                                           builder: (_) =>MyHomePage(title: widget.title,episodes: episode,)
-                                       )
-                                   );
+                                   Navigator.push(context,SlideRightRoute(page: MyHomePage(title: widget.title,episodes: episode,)));
+
                                  },
 
 

@@ -18,7 +18,7 @@ class SplashScreenState extends State<AnimatedSplashScreen>
   Animation<double> animation;
 
   startTime() async {
-    var _duration = new Duration(seconds:6);
+    var _duration = new Duration(seconds:3);
     return new Timer(_duration, navigationPage);
   }
 
@@ -30,7 +30,7 @@ class SplashScreenState extends State<AnimatedSplashScreen>
   void initState() {
     super.initState();
     animationController = new AnimationController(
-        vsync: this, duration: new Duration(seconds: 5));
+        vsync: this, duration: new Duration(seconds: 2));
     animation =
     new CurvedAnimation(parent: animationController, curve: Curves.easeOut);
 
@@ -55,7 +55,13 @@ class SplashScreenState extends State<AnimatedSplashScreen>
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
 
-              Padding(padding: EdgeInsets.only(bottom: 30.0),child:new Image.asset('assets/bs.png',height: 250.0,fit: BoxFit.scaleDown,))
+              Padding(padding: EdgeInsets.only(bottom: 30.0),child:new Text("BANGALI",
+                style: TextStyle(
+                  fontFamily: "Signatra",
+                  fontSize: 90,
+                  color: Colors.cyan,
+                ),
+              ),)//Image.asset('assets/bs.png',height: 250.0,fit: BoxFit.scaleDown,))
 
 
             ],),
